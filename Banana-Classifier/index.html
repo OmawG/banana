@@ -7,36 +7,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-brand">🍌 Banana Classifier</div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+  <div class="background"></div>
+
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">🍌 Banana Classifier</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h2>Classify a Banana</h2>
+
+      <label class="upload-btn">
+        Upload Image
+        <input type="file" id="imageUpload" accept="image/*" hidden />
+      </label>
+
+      <div class="image-box">
+        <img id="imagePreview" src="" alt="" />
+      </div>
+
+      <button id="classifyBtn" class="classify-btn">Classify</button>
+      <p id="prediction"></p>
     </div>
-  </nav>
 
-  <div class="main-blur"></div>
-
-  <div class="container">
-    <h1>Classify a Banana</h1>
-
-    <input type="file" id="image-input" accept="image/*" hidden />
-    <label for="image-input" class="upload-btn">Upload Image</label>
-
-    <div class="image-preview-container">
-      <img id="image-preview" alt="Image preview will appear here" />
-    </div>
-
-    <button id="classify-btn" onclick="classifyBanana()">Classify</button>
-    <div class="result" id="result"></div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Banana Classifier. All rights reserved.</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
-
- <footer class="footer">
-    <p>&copy; 2025 Banana Classifier. All rights reserved.</p>
-  </footer>
-
 </body>
 </html>
