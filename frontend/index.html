@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banana Classifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="main-content">
+    <!-- Navbar -->
+<nav class="navbar">
+  <h1>Banana Classifier 🍌</h1>
+  <ul class="nav-links">
+    <li><a href="#" id="dashboardLink">Dashboard</a></li>
+    <li><a href="#" id="historyLink">History</a></li>
+  </ul>
+</nav>
+
+<!-- Dashboard Section -->
+<div id="dashboardSection" class="dashboard-container">
+  <!-- Upload & classify UI -->
+</div>
+
+<!-- History Section -->
+<div id="historyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="historyClose">&times;</span>
+    <h2>📋 Classification History</h2>
+    <div class="history-scroll">
+      <ul id="historyList" class="history-list"></ul>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Main Container -->
+    <div class="container">
+      <h2>Classify a Banana</h2>
+
+      <label class="upload-btn">
+        Upload Image
+        <input type="file" id="imageUpload" accept="image/*" hidden />
+      </label>
+
+      <div class="image-box">
+  <button id="clearBtn" class="clear-btn" style="display: none;">&times;</button>
+  <img id="imagePreview" src="" alt="" />
+</div>
+
+
+      <button id="classifyBtn" class="classify-btn">Classify</button>
+      <p id="prediction"></p>
+
+      
+
+    </div>
+
+    <!-- Notification Modal -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Welcome to Banana Classifier 🍌</h3>
+    <p>This system classifies bananas into four categories:</p>
+    <ul>
+      <li><strong>Unripe</strong> – Green bananas, not ready yet.</li>
+      <li><strong>Ripe</strong> – Perfect yellow for eating.</li>
+      <li><strong>Overripe</strong> – Very soft, still edible.</li>
+      <li><strong>Rotten</strong> – Discard banana.</li>
+    </ul>
+    <p><strong>How to use:</strong></p>
+    <ol>
+      <li>Click “Upload Image” and select a photo of a banana.</li>
+      <li>Click “Classify” to get the prediction.</li>
+    </ol>
+    <p>Make sure the image is clear and shows the banana properly.</p>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Banana Classifier. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

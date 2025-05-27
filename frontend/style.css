@@ -1,0 +1,209 @@
+/* Reset & Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('/asset/banana-bg.png'); /* adjust path if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.background {
+  background: url('/asset/banana-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Overlay */
+.main-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #4b3f29;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fffdf5;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-list li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fffdf5;
+  border-left: 4px solid #4b3f29;
+  border-radius: 4px;
+}
+
+
+
+/* Container */
+.container {
+  background: #fffbe7;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 350px;
+  margin: 3rem auto 5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Upload */
+.upload-btn {
+  background-color: #f1c40f;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.image-box {
+  border: 2px dashed #aaa;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+}
+
+/* Classify Button */
+.classify-btn {
+  background-color: #4b3f29;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#prediction {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #4b3f29;
+}
+
+/* Footer */
+.footer {
+  background-color: #4b3f29;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+}
+
+.modal {
+  display: block; /* default visible for demo; we'll control it with JS */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fffbe7;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 2px solid #4b3f29;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  color: #4b3f29;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.clear-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  line-height: 1;
+}
+
+.clear-btn:hover {
+  color: red;
+}
+
+
+.image-box {
+  position: relative; /* Important for positioning the button inside */
+}
