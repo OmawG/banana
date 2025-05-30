@@ -36,8 +36,10 @@ body::before {
   position: relative;
   z-index: 1;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Vertically center content */
 }
 
 /* Navbar */
@@ -63,9 +65,16 @@ body::before {
   cursor: pointer;
 }
 
+/* Highlight active navbar link */
+.nav-links li a.active {
+  color: #f1c40f;
+  text-decoration: underline;
+}
+
 .history-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .history-list li {
@@ -76,16 +85,22 @@ body::before {
   border-radius: 4px;
 }
 
-
+.history-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
 
 /* Container */
 .container {
   background: #fffbe7;
-  border: 2px solid #333;
+  border: 3px solid #333;
   border-radius: 10px;
   padding: 2rem;
   width: 350px;
-  margin: 3rem auto 5rem;
+  margin: auto;
+  position: relative;
+  top: 0;
+  left: 0;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -148,28 +163,6 @@ body::before {
   margin-top: auto;
 }
 
-.modal {
-  display: block; /* default visible for demo; we'll control it with JS */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #fffbe7;
-  margin: 10% auto;
-  padding: 2rem;
-  border: 2px solid #4b3f29;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  position: relative;
-}
 
 .close {
   color: #4b3f29;
@@ -203,7 +196,34 @@ body::before {
   color: red;
 }
 
-
 .image-box {
   position: relative; /* Important for positioning the button inside */
+}
+
+/* Prevent scrolling on the whole page */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.banana-reference-list {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.banana-reference-list li {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.banana-ref-img {
+  display: block;
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  max-width: 120px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fffbe7;
+  padding: 4px;
 }

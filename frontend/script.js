@@ -2,15 +2,7 @@ const uploadInput = document.getElementById('imageUpload');
 const imagePreview = document.getElementById('imagePreview');
 const classifyBtn = document.getElementById('classifyBtn');
 const predictionText = document.getElementById('prediction');
-
-const dashboardSection = document.getElementById('dashboardSection');
-const dashboardLink = document.getElementById('dashboardLink');
-
-const historyLink = document.getElementById('historyLink');
-const historyModal = document.getElementById('historyModal');
-const historyClose = document.getElementById('historyClose');
-const historyList = document.getElementById('historyList');
-
+const clearBtn = document.getElementById('clearBtn');
 
 // ===== Image Preview =====
 uploadInput.addEventListener('change', function () {
@@ -28,7 +20,6 @@ uploadInput.addEventListener('change', function () {
   }
 });
 
-
 // ===== Clear Button =====
 clearBtn.addEventListener('click', function () {
   uploadInput.value = '';
@@ -37,8 +28,6 @@ clearBtn.addEventListener('click', function () {
   predictionText.textContent = '';
   clearBtn.style.display = 'none'; // Hide clear button
 });
-
-
 
 // ===== Classification Handler =====
 classifyBtn.addEventListener('click', function () {
@@ -61,36 +50,20 @@ classifyBtn.addEventListener('click', function () {
   } catch (err) {
     predictionText.textContent = `⚠️ Unable to classify image. ${err.message}`;
     predictionText.style.color = 'red';
+    // Optionally, save to localStorage for history page
     addToHistory(uploadInput.files[0].name, `❌ Error: ${err.message}`);
   }
 });
 
-// ===== Add to History List =====
+// ===== Add to History List (save to localStorage) =====
 function addToHistory(fileName, prediction) {
   const date = new Date().toLocaleString();
-  const entry = document.createElement('li');
-  entry.textContent = `${date} — ${fileName} ➜ ${prediction}`;
-  historyList.prepend(entry);
+  const entry = `${date} — ${fileName} ➜ ${prediction}`;
+  let history = JSON.parse(localStorage.getItem('bananaHistory') || '[]');
+  history.unshift(entry);
+  localStorage.setItem('bananaHistory', JSON.stringify(history));
 }
 
-// ===== Welcome Modal on First Visit =====
-window.addEventListener('load', function () {
-  const modal = document.getElementById('infoModal');
-  const closeBtn = modal.querySelector('.close');
-
-  if (!sessionStorage.getItem('seenModal')) {
-    modal.style.display = 'block';
-    sessionStorage.setItem('seenModal', 'true');
-  }
-
-  closeBtn.onclick = () => (modal.style.display = 'none');
-
-  window.addEventListener('click', function (event) {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});
 
 // ===== Navbar Link Handlers =====
 dashboardLink.addEventListener('click', () => {

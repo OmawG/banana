@@ -13,7 +13,7 @@ CORS(app)  # Enable CORS for all routes
 print("📂 Current working directory:", os.getcwd())
  
 # Model path and existence check
-model_path = '1.h5'
+model_path = 'C:/Users/Gakki/Desktop/banana/1_compatible.h5'
 print(f"🔍 Checking if model file exists at: {model_path} =>", os.path.exists(model_path))
  
 # Load the model once
@@ -48,7 +48,7 @@ def predict():
  
     try:
         image = Image.open(file).convert('RGB')
-        image = image.resize((224, 224))
+        image = image.resize((299, 299))
         image_array = np.array(image) / 255.0
         image_array = np.expand_dims(image_array, axis=0)
  
