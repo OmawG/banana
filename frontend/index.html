@@ -5,53 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Banana Classifier</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="../asset/icon-banana.png" />
 </head>
 <body>
   <div class="background"></div>
 
   <div class="main-content">
     <!-- Navbar -->
-<nav class="navbar">
-  <h1>Banana Classifier 🍌</h1>
-  <ul class="nav-links">
-    <li><a href="index.html">Dashboard</a></li>
-    <li><a href="history.html">History</a></li>
-    <li><a href="howto.html">How to Use</a></li>
-  </ul>
-</nav>
+    <nav class="navbar">
+      <h1>Banana Classifier 🍌</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="howto.html">How to Use</a></li>
+      </ul>
+    </nav>
 
-<!-- Dashboard Section -->
-<div id="dashboardSection" class="dashboard-container">
-  <!-- Upload & classify UI -->
-</div>
+    <div class="dashboard-row">
+      <!-- Heatmap Card -->
+      <div class="dashboard-card">
+        <h2>Show Heat-map</h2>
+        <div class="heatmap-box"></div>
+        <button class="dashboard-btn">Preview</button>
+      </div>
 
+      <!-- Classify Card -->
+      <div class="dashboard-card">
+        <h2>Classify a Banana</h2>
+        <label class="upload-btn">
+          Upload Image
+          <input type="file" id="imageUpload" accept="image/*" hidden />
+        </label>
+        <div class="image-box">
+          <button id="clearBtn" class="clear-btn" style="display: none;">&times;</button>
+          <img id="imagePreview" src="" alt="" />
+        </div>
+        <button id="classifyBtn" class="classify-btn">Classify</button>
+        <p id="prediction"></p>
+      </div>
 
-
-    <!-- Main Container -->
-    <div class="container">
-      <h2>Classify a Banana</h2>
-
-      <label class="upload-btn">
-        Upload Image
-        <input type="file" id="imageUpload" accept="image/*" hidden />
-      </label>
-
-      <div class="image-box">
-  <button id="clearBtn" class="clear-btn" style="display: none;">&times;</button>
-  <img id="imagePreview" src="" alt="" />
-</div>
-
-
-      <button id="classifyBtn" class="classify-btn">Classify</button>
-      <p id="prediction"></p>
-
-      
-
+      <!-- Prediction Card -->
+      <div class="dashboard-card">
+        <h2>Banana Prediction</h2>
+        <div class="prediction-list">
+          <div class="prediction-item">
+            <span>Ripe:</span> <span id="ripeVal">0%</span>
+            <div class="progress-bar"><div class="progress" id="ripeBar"></div></div>
+          </div>
+          <div class="prediction-item">
+            <span>Overripe:</span> <span id="overripeVal">0%</span>
+            <div class="progress-bar"><div class="progress" id="overripeBar"></div></div>
+          </div>
+          <div class="prediction-item">
+            <span>Unripe:</span> <span id="unripeVal">0%</span>
+            <div class="progress-bar"><div class="progress" id="unripeBar"></div></div>
+          </div>
+          <div class="prediction-item">
+            <span>Rotten:</span> <span id="rottenVal">0%</span>
+            <div class="progress-bar"><div class="progress" id="rottenBar"></div></div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-    <!-- Footer -->
     <footer class="footer">
       <p>&copy; 2025 Banana Classifier. All rights reserved.</p>
     </footer>

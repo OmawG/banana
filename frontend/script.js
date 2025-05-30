@@ -64,6 +64,20 @@ function addToHistory(fileName, prediction) {
   localStorage.setItem('bananaHistory', JSON.stringify(history));
 }
 
+// Example: Set progress bar values
+function setPredictionBars(ripe, overripe, unripe, rotten) {
+  document.getElementById('ripeVal').textContent = ripe + '%';
+  document.getElementById('ripeBar').style.width = ripe + '%';
+  document.getElementById('overripeVal').textContent = overripe + '%';
+  document.getElementById('overripeBar').style.width = overripe + '%';
+  document.getElementById('unripeVal').textContent = unripe + '%';
+  document.getElementById('unripeBar').style.width = unripe + '%';
+  document.getElementById('rottenVal').textContent = rotten + '%';
+  document.getElementById('rottenBar').style.width = rotten + '%';
+}
+
+// Example usage:
+setPredictionBars(96, 4, 0, 0);
 
 // ===== Navbar Link Handlers =====
 dashboardLink.addEventListener('click', () => {

@@ -28,7 +28,7 @@ except Exception as e:
     model = None
  
 # Sample class names - make sure these match your model output
-class_names = ['Overripe', 'Raw', 'Ripe', 'Rotten']
+class_names = ['Overripe', 'Ripe', 'Rotten', 'Unripe']
  
 @app.route('/', methods=['GET'])
 def home():

@@ -105,6 +105,21 @@ body::before {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+.howto-container {
+  background: #fffbe7;
+  border: 3px solid #333;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 1000px;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Upload */
 .upload-btn {
   background-color: #f1c40f;
@@ -226,4 +241,70 @@ html, body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   background: #fffbe7;
   padding: 4px;
+}
+
+.dashboard-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin: 2.5rem 0;
+}
+
+.dashboard-card {
+  background: #fffbe7;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2rem 2.5rem;
+  min-width: 320px;
+  max-width: 350px;
+  text-align: center;
+  border: 3px solid #4b3f29;
+}
+
+.heatmap-box {
+  width: 250px;
+  height: 180px;
+  background: #fff;
+  border: 2px dashed #ccc;
+  margin: 1rem auto 1.5rem auto;
+  border-radius: 8px;
+}
+
+.dashboard-btn {
+  background: #4b3f29;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.prediction-list {
+  margin-top: 1.5rem;
+}
+
+.prediction-item {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.progress {
+  background: #ffe135;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s;
 }
