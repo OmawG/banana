@@ -1,0 +1,4 @@
+pip install ultralytics flask flask-cors onnxruntime opencv-python pillow numpy werkzeug
+
+venv/Scripts/Activate
+python server.py
