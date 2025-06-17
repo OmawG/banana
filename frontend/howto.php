@@ -20,19 +20,19 @@
       <ul class="banana-reference-list">
         <li>
           <strong>Unripe</strong> – Green bananas, not ready yet.<br>
-          <img src="asset/unripe.jpg" alt="Unripe Banana" class="banana-ref-img">
+          <img src="../asset/unripe.jpg" alt="Unripe Banana" class="banana-ref-img">
         </li>
         <li>
           <strong>Ripe</strong> – Perfect yellow for eating.<br>
-          <img src="asset/ripe.jpg" alt="Ripe Banana" class="banana-ref-img">
+          <img src="../asset/ripe.jpg" alt="Ripe Banana" class="banana-ref-img">
         </li>
         <li>
           <strong>Overripe</strong> – Very soft, still edible.<br>
-          <img src="asset/overripe.jpg" alt="Overripe Banana" class="banana-ref-img">
+          <img src="../asset/overripe.jpg" alt="Overripe Banana" class="banana-ref-img">
         </li>
         <li>
           <strong>Rotten</strong> – Discard banana.<br>
-          <img src="asset/rotten.jpg" alt="Rotten Banana" class="banana-ref-img">
+          <img src="../asset/rotten.jpg" alt="Rotten Banana" class="banana-ref-img">
         </li>
       </ul>
       <p><strong>Instructions:</strong></p>

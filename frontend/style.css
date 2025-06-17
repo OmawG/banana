@@ -86,7 +86,9 @@ body::before {
   border: 3px solid #333;
   border-radius: 6px;
   padding: 2rem;
-  width: 430px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 420px;
   margin: auto;
   position: relative;
   top: 0;
